@@ -80,11 +80,4 @@ This section implements an FFN language model using pre-trained word embeddings 
 | **Neural** | **2-gram FFN + GloVe** | **195.57** |
 
 The **2-gram FFN model** achieved the lowest perplexity, demonstrating superior performance over the best traditional N-gram model. The use of dense word embeddings allows the model to generalize better and capture semantic similarity, which is crucial for reducing perplexity.
-
-## 4. Prediction Task
-
-The **2-gram FFN model** (the best performing model overall based on PPL) was used to predict the next word for the truncated sentences in `sample.csv`.
-
-*   **Prediction Logic:** The model takes the last word of the truncated text as context ($N=2$) and predicts the subsequent word.
-*   **Output File:** The results are saved to a new CSV file named **`sample_with_predictions.csv`**, with the predictions added in the `predicted` column.
 ```
